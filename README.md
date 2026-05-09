@@ -1,29 +1,17 @@
-# My engineering journal
+# Portfólio
 
-Portfolio em Jekyll com:
-
-- home editorial/minimalista
-- colecao de projetos com paginas dedicadas
-- colecao de notas de engenharia
-- `pt-BR` como idioma padrao na raiz
+My engineering journal :)
 
 ## Estrutura
 
-- `_projects/`: projetos do portfolio
+- `_projects/`: projetos do portfólio
 - `_notes/`: notas de engenharia
-- `pages/`: paginas indice como projetos e notas
+- `pages/`: páginas de índice, como projetos e notas
 - `_data/site.yml`: perfil, contatos e stack
 - `_data/i18n/`: textos da interface por idioma
 - `_layouts/` e `_includes/`: arquitetura modular do site
 - `assets/css/main.css`: sistema visual
-- `assets/js/main.js`: animacoes sutis
-
-## Personalizacao rapida
-
-1. Atualize seus contatos em `_data/site.yml`.
-2. Troque os projetos de exemplo em `_projects/`.
-3. Troque as notas de exemplo em `_notes/`.
-4. Se quiser outra microcopy, edite `_data/i18n/pt_BR.yml`.
+- `assets/js/main.js`: animações sutis
 
 ## Rodando localmente
 
