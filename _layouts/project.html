@@ -1,0 +1,47 @@
+---
+layout: default
+---
+
+<article class="detail-page site-shell">
+  <a
+    class="back-link reveal-on-scroll reveal-on-scroll--visible"
+    href="{{ '/#projetos' | relative_url }}"
+  >
+    {% include t.html key="projects.back_label" %}
+  </a>
+
+  <header class="detail-hero reveal-on-scroll reveal-on-scroll--visible">
+    <div class="detail-hero__meta">
+      <span>{{ page.year }}</span>
+      <span>{{ page.client }}</span>
+    </div>
+    <h1>{{ page.title }}</h1>
+    <div class="detail-hero__details">
+      <div>
+        <ul class="tag-list">
+          {% for type in page.types %} {% assign tag_class = type | slugify %}
+          <li class="tag tag--{{ tag_class }}">{{ type }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  {% if page.gallery %}
+  <section class="detail-gallery reveal-on-scroll">
+    <h2>{% include t.html key="projects.gallery" %}</h2>
+    <div class="detail-gallery__grid">
+      {% for image in page.gallery %}
+      <figure>
+        <img src="{{ image.src | relative_url }}" alt="{{ image.alt }}" />
+        {% if image.caption %}
+        <figcaption>{{ image.caption }}</figcaption>
+        {% endif %}
+      </figure>
+      {% endfor %}
+    </div>
+  </section>
+  {% endif %}
+
+  <section class="detail-content reveal-on-scroll">{{ content }}</section>
+</article>

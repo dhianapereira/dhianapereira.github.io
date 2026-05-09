@@ -1,0 +1,32 @@
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="color-scheme" content="light" />
+{% assign active_locale = page.locale | default: site.default_locale %} {%
+assign i18n = site.data.i18n[active_locale] %} {% assign meta_title = page.title
+%} {% if page.title_key %} {% assign meta_title = site.data.i18n[active_locale]
+%} {% assign title_keys = page.title_key | split: "." %} {% for key in
+title_keys %} {% assign meta_title = meta_title[key] %} {% endfor %} {% endif %}
+{% assign meta_description = page.description %} {% if page.description_key %}
+{% assign meta_description = site.data.i18n[active_locale] %} {% assign
+description_keys = page.description_key | split: "." %} {% for key in
+description_keys %} {% assign meta_description = meta_description[key] %} {%
+endfor %} {% endif %}
+<title>
+  {% if meta_title %} {{ meta_title }} | {{ site.title }} {% else %} {{
+  site.title }} {% endif %}
+</title>
+<meta
+  name="description"
+  content="{{ meta_description | default: i18n.meta.site_description | default: site.description }}"
+/>
+<link
+  rel="icon"
+  href="{{ '/assets/logo/logo.png' | relative_url }}"
+  type="image/png"
+/>
+<link
+  rel="apple-touch-icon"
+  href="{{ '/assets/logo/logo.png' | relative_url }}"
+/>
+<link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}" />
+<script src="{{ '/assets/js/main.js' | relative_url }}" defer></script>

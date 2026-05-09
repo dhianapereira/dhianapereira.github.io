@@ -1,0 +1,122 @@
+---
+layout: default
+---
+
+{% assign home_locale = page.locale | default: site.default_locale %} {% assign
+i18n = site.data.i18n[home_locale] %} {% assign home_projects = site.projects |
+where: "locale", home_locale | sort: "year" | reverse %} {% assign home_notes =
+site.notes | where: "locale", home_locale | sort: "date" | reverse %}
+<div class="site-shell">
+  <section class="hero">
+    <div class="hero__rails" aria-hidden="true">
+      <p class="hero__rail hero__rail--left">
+        PRODUTO · ARQUITETURA · TESTES · DOCUMENTAÇÃO
+      </p>
+    </div>
+    <div class="hero__grid reveal-on-scroll reveal-on-scroll--visible">
+      <div class="hero__main">
+        <p class="micro-label">{{ i18n.home.hero_label }}</p>
+        <h1 class="hero__title">{{ i18n.home.hero_title }}</h1>
+        <p class="hero__role">{{ i18n.home.profile_role }}</p>
+        <p class="hero__lead">{{ i18n.home.hero_text }}</p>
+        <div class="hero__links" aria-label="{{ i18n.home.contacts_label }}">
+          <a
+            class="hero__icon-link"
+            href="{{ site.data.site.contacts.email.url }}"
+            aria-label="{{ site.data.site.contacts.email.label }}"
+            title="{{ site.data.site.contacts.email.label }}"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M4 6.5h16a1.5 1.5 0 0 1 1.5 1.5v8A1.5 1.5 0 0 1 20 17.5H4A1.5 1.5 0 0 1 2.5 16V8A1.5 1.5 0 0 1 4 6.5Zm0 1 8 5 8-5"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.6"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </a>
+          <a
+            class="hero__icon-link"
+            href="{{ site.data.site.contacts.linkedin.url }}"
+            aria-label="{{ site.data.site.contacts.linkedin.label }}"
+            title="{{ site.data.site.contacts.linkedin.label }}"
+            target="_blank"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M7 9.5V18M7 6.75a.75.75 0 1 1 0 1.5.75.75 0 0 1 0-1.5ZM11 9.5V18M11 12.25c0-1.52 1.23-2.75 2.75-2.75S16.5 10.73 16.5 12.25V18"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.6"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </a>
+          <a
+            class="hero__icon-link"
+            href="{{ site.data.site.contacts.github.url }}"
+            aria-label="{{ site.data.site.contacts.github.label }}"
+            title="{{ site.data.site.contacts.github.label }}"
+            target="_blank"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M9 18.5c-3 .9-3-1.5-4.2-1.8M18 18.5v-2.3a4 4 0 0 0-1.1-3.1c3.7-.4 7.6-1.8 7.6-8.1A6.3 6.3 0 0 0 23 1.7a5.8 5.8 0 0 0-.1-4.2s-1.4-.4-4.4 1.7a15.1 15.1 0 0 0-8 0C7.5-2.9 6.1-2.5 6.1-2.5A5.8 5.8 0 0 0 6 1.7 6.3 6.3 0 0 0 4.5 6c0 6.2 3.8 7.7 7.5 8.1A4 4 0 0 0 11 17v1.5"
+                transform="translate(0 3)"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.45"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <aside class="hero__aside">
+        <p class="micro-label">{{ i18n.home.stack_label }}</p>
+        <ul class="hero__skills" aria-label="{{ i18n.home.skills_label }}">
+          {% for skill in site.data.site.skills %}
+          <li class="tag tag--note">{{ skill }}</li>
+          {% endfor %}
+        </ul>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section-block section-block--projects" id="projetos">
+    <div class="section-heading reveal-on-scroll">
+      <h2>{{ i18n.home.projects_title }}</h2>
+    </div>
+    <div class="project-list">
+      {% for project in home_projects limit: 4 %} {% include project_card.html
+      project=project %} {% endfor %}
+    </div>
+    <a
+      class="section-link reveal-on-scroll"
+      href="{{ '/projects/' | relative_url }}"
+    >
+      {{ i18n.home.archive_projects }}
+    </a>
+  </section>
+
+  <section class="section-block section-block--notes" id="notas">
+    <div class="section-heading reveal-on-scroll">
+      <h2>{{ i18n.home.notes_title }}</h2>
+    </div>
+    <div class="note-list">
+      {% for note in home_notes limit: 3 %} {% include note_card.html note=note
+      %} {% endfor %}
+    </div>
+    <a
+      class="section-link reveal-on-scroll"
+      href="{{ '/notes/' | relative_url }}"
+    >
+      {{ i18n.home.archive_notes }}
+    </a>
+  </section>
+</div>

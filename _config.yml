@@ -1,0 +1,41 @@
+title: "Dhiana Pereira"
+description: "Portfolio editorial e minimalista com projetos, notas de engenharia e contatos."
+lang: "pt-BR"
+locale: "pt_BR"
+default_locale: "pt_BR"
+url: ""
+baseurl: ""
+timezone: "America/Fortaleza"
+markdown: kramdown
+highlighter: rouge
+permalink: pretty
+
+collections:
+  projects:
+    output: true
+    permalink: /projects/:name/
+  notes:
+    output: true
+    permalink: /notes/:name/
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+      locale: pt_BR
+      lang: pt-BR
+  - scope:
+      path: ""
+      type: projects
+    values:
+      layout: project
+  - scope:
+      path: ""
+      type: notes
+    values:
+      layout: note
+
+exclude:
+  - README.md
+  - LICENSE

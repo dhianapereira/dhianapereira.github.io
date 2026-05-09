@@ -1,0 +1,11 @@
+<a class="note-card reveal-on-scroll" href="{{ note.url | relative_url }}">
+  <p class="note-card__date">{{ note.date | date: "%d.%m.%Y" }}</p>
+  <div class="note-card__body">
+    <h3>{{ note.title }}</h3>
+    <p>{{ note.description }}</p>
+  </div>
+  <div class="note-card__side">
+    <span>{{ note.read_time }}</span>
+    <span>{{ note.topics | join: " · " }}</span>
+  </div>
+</a>

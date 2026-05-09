@@ -1,0 +1,35 @@
+contacts:
+  email:
+    label: "E-mail"
+    value: "dhianapereira1@gmail.com"
+    url: "mailto:dhianapereira1@gmail.com"
+  linkedin:
+    label: "LinkedIn"
+    value: "linkedin.com/in/dhianapereira"
+    url: "https://www.linkedin.com/in/dhianapereira/"
+  github:
+    label: "GitHub"
+    value: "github.com/dhianapereira"
+    url: "https://github.com/dhianapereira"
+
+skills:
+  - "Flutter"
+  - "Firebase"
+  - "Dart"
+  - "Kotlin"
+  - "Java"
+  - "Swift"
+  - "Objective-C"
+  - "NextJS"
+  - "NestJS"
+  - "JavaScript"
+  - "TypeScript"
+  - "Ruby"
+  - "Jekyll"
+  - "REST APIs"
+  - "GraphQL"
+  - "TDD"
+  - "SDUI"
+  - "CI/CD"
+  - "Datadog"
+  - "New Relic"

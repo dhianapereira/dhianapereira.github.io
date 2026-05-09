@@ -1,0 +1,41 @@
+---
+layout: default
+title_key: projects.page_title
+description_key: projects.page_description
+locale: pt_BR
+lang: pt-BR
+permalink: /projects/
+---
+
+{% assign listing_locale = page.locale | default: site.default_locale %} {%
+assign i18n = site.data.i18n[listing_locale] %} {% assign all_projects =
+site.projects | where: "locale", listing_locale | sort: "year" | reverse %}
+<div class="listing-page site-shell">
+  <header
+    class="listing-page__header reveal-on-scroll reveal-on-scroll--visible"
+  >
+    <div class="listing-page__rails" aria-hidden="true">
+      <p class="listing-page__rail listing-page__rail--right">
+        {{ i18n.projects.counter_label }} / {{ all_projects.size | plus: 0 | prepend: '0' | slice: -2, 2 }}
+      </p>
+    </div>
+    <div class="listing-page__hero listing-page__hero--compact">
+      <div class="listing-page__intro">
+        <p class="micro-label">{{ i18n.projects.listing_label }}</p>
+        <h1>{{ i18n.projects.page_title }}</h1>
+      </div>
+    </div>
+  </header>
+
+  {% if all_projects.size > 0 %}
+  <div class="project-list">
+    {% for project in all_projects %} {% include project_card.html
+    project=project %} {% endfor %}
+  </div>
+  {% else %}
+  <section class="error-panel reveal-on-scroll">
+    <h2>{{ i18n.projects.empty_title }}</h2>
+    <p>{{ i18n.projects.empty_text }}</p>
+  </section>
+  {% endif %}
+</div>

@@ -1,0 +1,54 @@
+meta:
+  site_title: "Dhiana Pereira"
+  site_description: "Portfolio com projetos, contatos e notas de engenharia."
+  skip_to_content: "Ir para o conteúdo principal"
+  copyright: "© 2026 Dhiana Pereira. Todos os direitos reservados."
+  home_title: "Portfólio"
+  home_description: "Projetos de Dhiana Pereira."
+  brand_alt: "Dhiana Pereira"
+
+home:
+  hero_label: "Portfolio"
+  hero_title: "Dhiana Pereira"
+  hero_text: "Atuando em aplicações em produção com foco em qualidade, testes e arquitetura."
+  profile_role: "Engenheira mobile"
+  contacts_label: "Contatos e redes"
+  projects_title: "Projetos"
+  notes_title: "Notas de engenharia"
+  stack_label: "Stack"
+  skills_label: "Skills"
+  archive_projects: "Ver todos os projetos"
+  archive_notes: "Ver todas as notas"
+
+navigation:
+  menu_open: "Abrir menu principal"
+  menu_label: "Navegação principal"
+  home: "Home"
+  projects: "Projetos"
+  notes: "Notas de Engenharia"
+
+projects:
+  page_title: "Projetos"
+  page_description: "Lista completa de projetos."
+  listing_label: "Arquivo"
+  counter_label: "CATÁLOGO"
+  gallery: "Galeria"
+  back_label: "Voltar"
+  empty_title: "Projetos em breve"
+  empty_text: "Novos estudos e produtos entram aqui conforme eu publico os detalhes."
+
+notes:
+  page_title: "Notas de engenharia"
+  page_description: "Lista completa de notas de engenharia."
+  listing_label: "Arquivo"
+  counter_label: "NOTAS"
+  back_label: "Voltar"
+  empty_title: "Notas em preparação"
+  empty_text: "Esta seção vai receber documentações técnicas e aprendizados de projeto."
+
+errors:
+  page_description: "Página não encontrada."
+  badge_404: "Erro 404"
+  title: "Página não encontrada"
+  text: "O caminho que você tentou abrir não existe ou foi movido."
+  cta: "Voltar para a página inicial"

@@ -1,0 +1,55 @@
+{% assign header_locale = page.locale | default: site.default_locale %} {%
+assign i18n = site.data.i18n[header_locale] %} {% assign on_projects = page.url
+contains '/projects/' %} {% assign on_notes = page.url contains '/notes/' %}
+<header class="site-header">
+  <div class="site-shell site-header__inner">
+    <a class="site-header__mark" href="{{ '/' | relative_url }}">
+      <img
+        src="{{ '/assets/logo/logo.png' | relative_url }}"
+        alt="{{ i18n.meta.brand_alt }}"
+      />
+    </a>
+
+    <button
+      class="site-header__toggle"
+      type="button"
+      aria-expanded="false"
+      aria-controls="site-navigation"
+      aria-label="{{ i18n.navigation.menu_open }}"
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav
+      class="site-header__nav"
+      id="site-navigation"
+      aria-label="{{ i18n.navigation.menu_label }}"
+    >
+      <a
+        class="{% if page.url == '/' %}is-active{% endif %}"
+        href="{{ '/' | relative_url }}"
+      >
+        {{ i18n.navigation.home }}
+      </a>
+      <a
+        class="{% if on_projects %}is-active{% endif %}"
+        href="{{ '/projects/' | relative_url }}"
+      >
+        {{ i18n.navigation.projects }}
+      </a>
+      <a
+        class="{% if on_notes %}is-active{% endif %}"
+        href="{{ '/notes/' | relative_url }}"
+      >
+        {{ i18n.navigation.notes }}
+      </a>
+    </nav>
+
+    <p class="site-header__stamp">
+      <span>{{ site.time | date: "%d %b %Y" | upcase }}</span>
+      <span>GMT-3</span>
+    </p>
+  </div>
+</header>

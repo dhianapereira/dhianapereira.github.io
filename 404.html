@@ -1,0 +1,16 @@
+---
+layout: default
+permalink: /404.html
+title: "404"
+description_key: errors.page_description
+locale: pt_BR
+lang: pt-BR
+---
+<section class="error-page site-shell">
+  <div class="error-panel reveal-on-scroll reveal-on-scroll--visible">
+    <p class="micro-label">{% include t.html key="errors.badge_404" %}</p>
+    <h1>{% include t.html key="errors.title" %}</h1>
+    <p>{% include t.html key="errors.text" %}</p>
+    <a class="button-link" href="{{ '/' | relative_url }}">{% include t.html key="errors.cta" %}</a>
+  </div>
+</section>

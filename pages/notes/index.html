@@ -1,0 +1,41 @@
+---
+layout: default
+title_key: notes.page_title
+description_key: notes.page_description
+locale: pt_BR
+lang: pt-BR
+permalink: /notes/
+---
+
+{% assign listing_locale = page.locale | default: site.default_locale %} {%
+assign i18n = site.data.i18n[listing_locale] %} {% assign all_notes = site.notes
+| where: "locale", listing_locale | sort: "date" | reverse %}
+<div class="listing-page site-shell">
+  <header
+    class="listing-page__header reveal-on-scroll reveal-on-scroll--visible"
+  >
+    <div class="listing-page__rails" aria-hidden="true">
+      <p class="listing-page__rail listing-page__rail--right">
+        {{ i18n.notes.counter_label }} / {{ all_notes.size | plus: 0 | prepend: '0' | slice: -2, 2 }}
+      </p>
+    </div>
+    <div class="listing-page__hero listing-page__hero--compact">
+      <div class="listing-page__intro">
+        <p class="micro-label">{{ i18n.notes.listing_label }}</p>
+        <h1>{{ i18n.notes.page_title }}</h1>
+      </div>
+    </div>
+  </header>
+
+  {% if all_notes.size > 0 %}
+  <div class="note-list">
+    {% for note in all_notes %} {% include note_card.html note=note %} {% endfor
+    %}
+  </div>
+  {% else %}
+  <section class="error-panel reveal-on-scroll">
+    <h2>{{ i18n.notes.empty_title }}</h2>
+    <p>{{ i18n.notes.empty_text }}</p>
+  </section>
+  {% endif %}
+</div>
