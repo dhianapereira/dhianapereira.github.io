@@ -28,6 +28,18 @@
           syncMenuState(false);
         }
       });
+
+      document.addEventListener("click", function (event) {
+        if (!siteHeader.contains(event.target)) {
+          syncMenuState(false);
+        }
+      });
+
+      document.addEventListener("keydown", function (event) {
+        if (event.key === "Escape") {
+          syncMenuState(false);
+        }
+      });
     }
 
     if (!("IntersectionObserver" in window)) {
