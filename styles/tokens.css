@@ -1,0 +1,33 @@
+:root {
+  --font-serif:
+    "Iowan Old Style", "Palatino Linotype", "Book Antiqua",
+    "Cormorant Garamond", serif;
+  --font-sans: "Avenir Next", "Segoe UI", "Helvetica Neue", sans-serif;
+  --color-paper: #f3f0ea;
+  --color-paper-deep: #e6e1dc;
+  --color-paper-soft: #faf7f2;
+  --color-ink: #151311;
+  --color-muted: #666b79;
+  --color-line: rgba(21, 19, 17, 0.14);
+  --color-line-strong: rgba(21, 19, 17, 0.22);
+  --color-accent: #6d748f;
+  --color-shadow: rgba(31, 24, 18, 0.05);
+  --tag-website-ink: #7a5a2b;
+  --tag-website-bg: rgba(122, 90, 43, 0.12);
+  --tag-web-platform-ink: #2d6cdf;
+  --tag-web-platform-bg: rgba(45, 108, 223, 0.12);
+  --tag-app-ink: #0f6fff;
+  --tag-app-bg: rgba(15, 111, 255, 0.12);
+  --tag-game-ink: #a34f18;
+  --tag-game-bg: rgba(163, 79, 24, 0.13);
+  --tag-package-ink: #18a7a8;
+  --tag-package-bg: rgba(24, 167, 168, 0.12);
+  --tag-ai-ink: #0f766e;
+  --tag-ai-bg: rgba(15, 118, 110, 0.12);
+  --tag-backend-ink: #c23b53;
+  --tag-backend-bg: rgba(194, 59, 83, 0.12);
+  --tag-note-ink: #666b79;
+  --tag-note-bg: rgba(102, 107, 121, 0.08);
+  --shell-width: min(1340px, calc(100vw - 2.5rem));
+  --transition: 220ms ease;
+}

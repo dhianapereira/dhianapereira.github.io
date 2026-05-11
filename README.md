@@ -10,8 +10,9 @@ My engineering journal :)
 - `_data/site.yml`: perfil, contatos e stack
 - `_data/i18n/`: textos da interface por idioma
 - `_layouts/` e `_includes/`: arquitetura modular do site
-- `assets/css/main.css`: sistema visual
-- `assets/js/main.js`: animações sutis
+- `assets/`: imagens, logo e outros arquivos estáticos
+- `styles/`: CSS separado por camadas (`tokens`, `base`, `layout`, `components`, `pages`, `utilities`, `responsive`)
+- `scripts/`: comportamentos de interface separados por responsabilidade
 
 ## Rodando localmente
 

@@ -1,0 +1,239 @@
+.hero,
+.listing-page,
+.detail-page,
+.error-page {
+  padding-top: 2.4rem;
+}
+
+.hero,
+.listing-page__header {
+  position: relative;
+}
+
+.hero__rails,
+.listing-page__rails {
+  pointer-events: none;
+}
+
+.hero__rail,
+.listing-page__rail,
+.detail-hero__meta {
+  font-size: 0.76rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.hero__rail,
+.listing-page__rail {
+  position: absolute;
+  color: var(--color-muted);
+  opacity: 0.9;
+  writing-mode: vertical-rl;
+}
+
+.hero__rail--left,
+.listing-page__rail--left {
+  left: 0;
+  top: 9rem;
+}
+
+.hero__rail--right,
+.listing-page__rail--right {
+  right: 0;
+  top: 12rem;
+}
+
+.hero__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.98fr) minmax(260px, 0.58fr);
+  gap: 3.2rem;
+  align-items: start;
+  min-height: 24rem;
+  padding: 1rem 5.2rem 0;
+}
+
+.hero__main {
+  max-width: 34rem;
+  padding-top: 2.2rem;
+}
+
+.hero__title,
+.listing-page__intro h1,
+.detail-hero h1,
+.detail-content h2,
+.error-panel h1,
+.error-panel h2 {
+  font-family: var(--font-serif);
+  font-weight: 500;
+  letter-spacing: -0.06em;
+}
+
+.hero__title {
+  max-width: 8ch;
+  margin: 0;
+  font-size: clamp(3.2rem, 7.2vw, 5.4rem);
+  line-height: 0.9;
+}
+
+.hero__role {
+  margin: 0.95rem 0 0.8rem;
+  color: var(--color-muted);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.hero__lead {
+  max-width: 25rem;
+  margin: 0;
+  font-size: 1.06rem;
+}
+
+.hero__main .hero__links {
+  margin-top: 1.5rem;
+}
+
+.hero__aside {
+  display: grid;
+  gap: 1rem;
+  align-content: start;
+  padding-top: 2.3rem;
+}
+
+.listing-page__header {
+  padding: 1rem 0 2.8rem;
+}
+
+.listing-page__hero {
+  display: grid;
+  grid-template-columns: minmax(0, 0.92fr) minmax(380px, 0.88fr);
+  gap: 4rem;
+  align-items: start;
+  min-height: 33rem;
+  padding: 1rem 5.2rem 0;
+}
+
+.listing-page__hero--compact {
+  grid-template-columns: minmax(0, 1fr) 12rem;
+  min-height: auto;
+  gap: 3.4rem;
+  align-items: end;
+  padding-top: 2.4rem;
+}
+
+.listing-page__intro {
+  max-width: 44rem;
+  padding-top: 0;
+}
+
+.listing-page__intro h1,
+.detail-hero h1,
+.error-panel h1 {
+  margin: 0;
+  font-size: clamp(2.7rem, 6vw, 5rem);
+  line-height: 0.9;
+}
+
+.section-link,
+.detail-page > .back-link,
+.detail-hero,
+.detail-overview,
+.detail-gallery,
+.detail-content,
+.listing-page__header > .error-panel {
+  margin-left: 5.2rem;
+  margin-right: 5.2rem;
+}
+
+.detail-page > .back-link {
+  margin-bottom: 1rem;
+}
+
+.detail-hero,
+.detail-overview,
+.detail-gallery,
+.detail-content,
+.error-panel {
+  padding: 0 0 1.4rem;
+  border-bottom: 1px solid var(--color-line);
+}
+
+.detail-hero__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-bottom: 1rem;
+  color: var(--color-muted);
+  font-weight: 700;
+}
+
+.detail-hero__details {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.detail-hero__summary {
+  max-width: 44rem;
+  margin: 1rem 0 0;
+  color: var(--color-muted);
+  font-size: clamp(1.04rem, 2vw, 1.28rem);
+  line-height: 1.62;
+}
+
+.detail-overview {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 1.4rem;
+}
+
+.detail-gallery {
+  margin-top: 1.4rem;
+}
+
+.detail-gallery__grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.detail-content {
+  margin-top: 1.4rem;
+  color: var(--color-ink);
+}
+
+.detail-content h2 {
+  margin: 1.8rem 0 0.8rem;
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  line-height: 1;
+}
+
+.detail-content ol,
+.detail-content ul {
+  padding-left: 1.1rem;
+}
+
+.error-page {
+  display: grid;
+  place-items: center;
+  min-height: calc(100vh - 12rem);
+}
+
+.error-panel {
+  width: min(42rem, 100%);
+  margin-left: 5.2rem;
+  margin-right: 5.2rem;
+}
+
+.error-panel h2 {
+  margin: 0 0 0.35rem;
+  font-size: clamp(1.7rem, 2.8vw, 2.45rem);
+  line-height: 0.98;
+}
+
+.error-panel p {
+  color: var(--color-muted);
+}
