@@ -6,9 +6,24 @@
       return;
     }
 
+    function hasInternalReferrer() {
+      if (!document.referrer) {
+        return false;
+      }
+
+      try {
+        var referrerUrl = new URL(document.referrer);
+
+        return referrerUrl.origin === window.location.origin
+          && referrerUrl.pathname !== window.location.pathname;
+      } catch (error) {
+        return false;
+      }
+    }
+
     backLinks.forEach(function (link) {
       link.addEventListener("click", function (event) {
-        if (window.history.length <= 1) {
+        if (!hasInternalReferrer() || window.history.length <= 1) {
           return;
         }
 
