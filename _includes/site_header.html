@@ -61,7 +61,13 @@ assign i18n = site.data.i18n[header_locale] %} {% assign current_section =
     </nav>
 
     <p class="site-header__stamp">
-      <span>{{ site.time | date: "%d %b %Y" | upcase }}</span>
+      <span
+        data-current-date
+        data-time-zone="{{ site.timezone }}"
+        data-locale="{{ site.lang | default: 'pt-BR' }}"
+      >
+        {{ site.time | date: "%d %b %Y" | upcase }}
+      </span>
       <span>GMT-3</span>
     </p>
   </div>
