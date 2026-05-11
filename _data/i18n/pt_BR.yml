@@ -33,7 +33,12 @@ projects:
   listing_label: "Arquivo"
   counter_label: "CATÁLOGO"
   gallery: "Galeria"
+  links: "Links"
+  stack: "Stack"
   back_label: "Voltar"
+  previous_image: "Anterior"
+  next_image: "Próxima"
+  jump_to_image: "Ir para a imagem"
   empty_title: "Projetos em breve"
   empty_text: "Novos estudos e produtos entram aqui conforme eu publico os detalhes."
 

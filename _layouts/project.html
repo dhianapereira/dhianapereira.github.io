@@ -16,6 +16,9 @@ layout: default
       <span>{{ page.client }}</span>
     </div>
     <h1>{{ page.title }}</h1>
+    {% if page.description %}
+    <p class="detail-hero__summary">{{ page.description }}</p>
+    {% endif %}
     <div class="detail-hero__details">
       <div>
         <ul class="tag-list">
@@ -27,9 +30,85 @@ layout: default
     </div>
   </header>
 
+  {% if page.links or page.stack %}
+  <section class="detail-overview reveal-on-scroll">
+    {% if page.links %}
+    <div class="detail-panel">
+      <h2>{% include t.html key="projects.links" %}</h2>
+      <ul class="detail-link-list">
+        {% for link in page.links %}
+        <li>
+          <a href="{{ link.url }}" target="_blank" rel="noreferrer noopener">
+            <span>{{ link.label }}</span>
+            <span>{{ link.url | replace: 'https://', '' | replace: 'http://', '' }}</span>
+          </a>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+    {% endif %}
+
+    {% if page.stack %}
+    <div class="detail-panel">
+      <h2>{% include t.html key="projects.stack" %}</h2>
+      <ul class="tag-list">
+        {% for item in page.stack %}
+        <li class="tag">{{ item }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+    {% endif %}
+  </section>
+  {% endif %}
+
   {% if page.gallery %}
   <section class="detail-gallery reveal-on-scroll">
     <h2>{% include t.html key="projects.gallery" %}</h2>
+    {% if page.gallery.size > 1 %}
+    <div class="detail-carousel" data-carousel>
+      <div class="detail-carousel__viewport" data-carousel-viewport tabindex="0">
+        {% for image in page.gallery %}
+        <figure class="detail-carousel__slide" data-carousel-slide>
+          <img src="{{ image.src | relative_url }}" alt="{{ image.alt }}" />
+          {% if image.caption %}
+          <figcaption>{{ image.caption }}</figcaption>
+          {% endif %}
+        </figure>
+        {% endfor %}
+      </div>
+      <div class="detail-carousel__footer">
+        <button
+          class="detail-carousel__nav"
+          type="button"
+          data-carousel-prev
+          aria-label="{% include t.html key='projects.previous_image' %}"
+        >
+          {% include t.html key="projects.previous_image" %}
+        </button>
+        <div class="detail-carousel__dots">
+          {% for image in page.gallery %}
+          <button
+            class="detail-carousel__dot{% if forloop.first %} is-active{% endif %}"
+            type="button"
+            data-carousel-dot="{{ forloop.index0 }}"
+            aria-label="{% include t.html key='projects.jump_to_image' %} {{ forloop.index }}"
+            aria-current="{% if forloop.first %}true{% else %}false{% endif %}"
+          >
+            {{ forloop.index }}
+          </button>
+          {% endfor %}
+        </div>
+        <button
+          class="detail-carousel__nav"
+          type="button"
+          data-carousel-next
+          aria-label="{% include t.html key='projects.next_image' %}"
+        >
+          {% include t.html key="projects.next_image" %}
+        </button>
+      </div>
+    </div>
+    {% else %}
     <div class="detail-gallery__grid">
       {% for image in page.gallery %}
       <figure>
@@ -40,6 +119,7 @@ layout: default
       </figure>
       {% endfor %}
     </div>
+    {% endif %}
   </section>
   {% endif %}
 
