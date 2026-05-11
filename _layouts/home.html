@@ -4,7 +4,7 @@ layout: default
 
 {% assign home_locale = page.locale | default: site.default_locale %} {% assign
 i18n = site.data.i18n[home_locale] %} {% assign home_projects = site.projects |
-where: "locale", home_locale | sort: "year" | reverse %} {% assign home_notes =
+where: "locale", home_locale | sort: "date" | reverse %} {% assign home_notes =
 site.notes | where: "locale", home_locale | sort: "date" | reverse %}
 <div class="site-shell">
   <section class="hero">

@@ -12,7 +12,7 @@ layout: default
 
   <header class="detail-hero reveal-on-scroll reveal-on-scroll--visible">
     <div class="detail-hero__meta">
-      <span>{{ page.year }}</span>
+      <span>{{ page.date | date: "%Y" }}</span>
       <span>{{ page.client }}</span>
     </div>
     <h1>{{ page.title }}</h1>

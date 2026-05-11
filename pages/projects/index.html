@@ -9,7 +9,7 @@ permalink: /projects/
 
 {% assign listing_locale = page.locale | default: site.default_locale %} {%
 assign i18n = site.data.i18n[listing_locale] %} {% assign all_projects =
-site.projects | where: "locale", listing_locale | sort: "year" | reverse %}
+site.projects | where: "locale", listing_locale | sort: "date" | reverse %}
 <div class="listing-page site-shell">
   <header
     class="listing-page__header reveal-on-scroll reveal-on-scroll--visible"

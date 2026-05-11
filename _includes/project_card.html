@@ -7,7 +7,7 @@
     <p>{{ project.description }}</p>
   </div>
   <div class="project-card__side">
-    <span>{{ project.year }}</span>
+    <span>{{ project.date | date: "%Y" }}</span>
     <span>{{ project.types | join: " · " }}</span>
   </div>
 </a>
