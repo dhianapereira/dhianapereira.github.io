@@ -12,6 +12,22 @@
   --color-line-strong: rgba(21, 19, 17, 0.22);
   --color-accent: #6d748f;
   --color-shadow: rgba(31, 24, 18, 0.05);
+  --tag-website-ink: #7a5a2b;
+  --tag-website-bg: rgba(122, 90, 43, 0.12);
+  --tag-web-platform-ink: #2d6cdf;
+  --tag-web-platform-bg: rgba(45, 108, 223, 0.12);
+  --tag-app-ink: #0f6fff;
+  --tag-app-bg: rgba(15, 111, 255, 0.12);
+  --tag-game-ink: #a34f18;
+  --tag-game-bg: rgba(163, 79, 24, 0.13);
+  --tag-package-ink: #18a7a8;
+  --tag-package-bg: rgba(24, 167, 168, 0.12);
+  --tag-ai-ink: #0f766e;
+  --tag-ai-bg: rgba(15, 118, 110, 0.12);
+  --tag-backend-ink: #c23b53;
+  --tag-backend-bg: rgba(194, 59, 83, 0.12);
+  --tag-note-ink: #666b79;
+  --tag-note-bg: rgba(102, 107, 121, 0.08);
   --shell-width: min(1340px, calc(100vw - 2.5rem));
   --transition: 220ms ease;
 }
@@ -628,13 +644,44 @@ li {
   box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.25);
 }
 
-.tag--app {
-  color: #68719a;
-  background: rgba(104, 113, 154, 0.1);
+.tag--website {
+  color: var(--tag-website-ink);
+  background: var(--tag-website-bg);
 }
+
+.tag--web-platform {
+  color: var(--tag-web-platform-ink);
+  background: var(--tag-web-platform-bg);
+}
+
+.tag--app {
+  color: var(--tag-app-ink);
+  background: var(--tag-app-bg);
+}
+
+.tag--game {
+  color: var(--tag-game-ink);
+  background: var(--tag-game-bg);
+}
+
+.tag--package {
+  color: var(--tag-package-ink);
+  background: var(--tag-package-bg);
+}
+
+.tag--ai {
+  color: var(--tag-ai-ink);
+  background: var(--tag-ai-bg);
+}
+
+.tag--backend {
+  color: var(--tag-backend-ink);
+  background: var(--tag-backend-bg);
+}
+
 .tag--note {
-  color: var(--color-muted);
-  background: rgba(102, 107, 121, 0.08);
+  color: var(--tag-note-ink);
+  background: var(--tag-note-bg);
 }
 
 .detail-gallery {
