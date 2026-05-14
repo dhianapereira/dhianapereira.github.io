@@ -64,5 +64,5 @@ Também participei da definição do fluxo editorial do projeto, buscando uma fo
 - Uso de Jekyll para manter o site estático, leve e simples de publicar
 - Conteúdo organizado em `layouts`, `includes` e coleções para reaproveitamento de estrutura
 - CSS customizado e JavaScript leve para interações pontuais sem depender de frameworks
-- Adoção de um CMS baseado em Git para simplificar a atualização de conteúdo por usuários não técnicos
+- Adoção de um _Content Management System_ (CMS) baseado em Git para simplificar a atualização de conteúdo por usuários não técnicos
 - Base preparada para continuidade do projeto, facilitando manutenção e expansão de conteúdo
