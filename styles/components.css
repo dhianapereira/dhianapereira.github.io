@@ -98,6 +98,41 @@
   text-align: right;
 }
 
+.project-card__index {
+  display: grid;
+  align-content: start;
+  gap: 0.9rem;
+}
+
+.project-context {
+  display: inline-flex;
+  align-items: center;
+  color: var(--color-ink);
+  line-height: 1;
+}
+
+.project-context__icon {
+  width: 0.9rem;
+  height: 0.9rem;
+  color: #c96a2b;
+  flex-shrink: 0;
+}
+
+.project-card__body {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.project-card__context {
+  justify-self: start;
+  margin-top: 0;
+}
+
+.project-card__context .project-context__icon {
+  width: 3rem;
+  height: 3rem;
+}
+
 .project-card h3,
 .note-card h3 {
   margin: 0 0 0.35rem;

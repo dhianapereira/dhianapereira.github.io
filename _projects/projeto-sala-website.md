@@ -2,6 +2,7 @@
 title: "Projeto S.A.L.A"
 description: "Website institucional e editorial criado para apresentar o Projeto S.A.L.A, publicar artigos e organizar frentes de gamificação voltadas à educação ambiental em Alagoas."
 date: 2026-05-09
+context: client
 client: "Projeto S.A.L.A"
 locale: pt_BR
 lang: pt-BR

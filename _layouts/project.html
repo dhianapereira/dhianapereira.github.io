@@ -13,8 +13,26 @@ layout: default
   <header class="detail-hero reveal-on-scroll reveal-on-scroll--visible">
     <div class="detail-hero__meta">
       <span>{{ page.date | date: "%Y" }}</span>
-      <span>{{ page.client }}</span>
     </div>
+    {% if page.client %}
+    <p class="detail-hero__client">
+      {% include project_context.html
+        context=page.context
+        locale=page.locale
+        class_name="detail-hero__context"
+      %}
+      <span>{% include t.html key="projects.client_label" locale=page.locale %}</span>
+      <strong>{{ page.client }}</strong>
+    </p>
+    {% elsif page.context == "client" %}
+    <div class="detail-hero__signal">
+      {% include project_context.html
+        context=page.context
+        locale=page.locale
+        class_name="detail-hero__context"
+      %}
+    </div>
+    {% endif %}
     <h1>{{ page.title }}</h1>
     {% if page.description %}
     <p class="detail-hero__summary">{{ page.description }}</p>

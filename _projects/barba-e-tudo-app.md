@@ -2,6 +2,7 @@
 title: "Barba e tudo"
 description: "Aplicativo Flutter para operação interna da loja, com foco em estoque, movimentações, despesas, relatórios e controle de acesso por perfil."
 date: 2026-04-13
+context: client
 client: "Barba e tudo"
 locale: pt_BR
 lang: pt-BR

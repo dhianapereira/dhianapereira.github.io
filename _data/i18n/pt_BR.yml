@@ -32,6 +32,10 @@ projects:
   page_description: "Lista completa de projetos."
   listing_label: "Arquivo"
   counter_label: "CATÁLOGO"
+  client_label: "Cliente"
+  context_labels:
+    client: "Em uso por clientes reais"
+    side_project: "Projeto pessoal"
   gallery: "Galeria"
   links: "Links"
   stack: "Stack"

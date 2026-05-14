@@ -1,6 +1,11 @@
 <a class="project-card reveal-on-scroll" href="{{ project.url | relative_url }}">
   <div class="project-card__index">
     <span>{{ forloop.index | default: "01" }}</span>
+    {% include project_context.html
+      context=project.context
+      locale=project.locale
+      class_name="project-card__context"
+    %}
   </div>
   <div class="project-card__body">
     <h3>{{ project.title }}</h3>
