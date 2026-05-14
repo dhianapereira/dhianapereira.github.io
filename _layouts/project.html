@@ -69,7 +69,18 @@ layout: default
       <div class="detail-carousel__viewport" data-carousel-viewport tabindex="0">
         {% for image in page.gallery %}
         <figure class="detail-carousel__slide" data-carousel-slide>
-          <img src="{{ image.src | relative_url }}" alt="{{ image.alt }}" />
+          <button
+            class="detail-gallery__trigger"
+            type="button"
+            data-gallery-open
+            data-gallery-src="{{ image.src | relative_url }}"
+            data-gallery-alt="{{ image.alt | escape }}"
+            {% if image.caption %}data-gallery-caption="{{ image.caption | escape }}"{% endif %}
+            aria-label="{% include t.html key='projects.open_image' %}: {{ image.alt | escape }}"
+            aria-haspopup="dialog"
+          >
+            <img src="{{ image.src | relative_url }}" alt="{{ image.alt }}" />
+          </button>
           {% if image.caption %}
           <figcaption>{{ image.caption }}</figcaption>
           {% endif %}
@@ -112,7 +123,18 @@ layout: default
     <div class="detail-gallery__grid">
       {% for image in page.gallery %}
       <figure>
-        <img src="{{ image.src | relative_url }}" alt="{{ image.alt }}" />
+        <button
+          class="detail-gallery__trigger"
+          type="button"
+          data-gallery-open
+          data-gallery-src="{{ image.src | relative_url }}"
+          data-gallery-alt="{{ image.alt | escape }}"
+          {% if image.caption %}data-gallery-caption="{{ image.caption | escape }}"{% endif %}
+          aria-label="{% include t.html key='projects.open_image' %}: {{ image.alt | escape }}"
+          aria-haspopup="dialog"
+        >
+          <img src="{{ image.src | relative_url }}" alt="{{ image.alt }}" />
+        </button>
         {% if image.caption %}
         <figcaption>{{ image.caption }}</figcaption>
         {% endif %}
@@ -121,6 +143,30 @@ layout: default
     </div>
     {% endif %}
   </section>
+
+  <div class="detail-gallery-modal" data-gallery-modal hidden>
+    <div class="detail-gallery-modal__backdrop" data-gallery-close></div>
+    <div
+      class="detail-gallery-modal__dialog"
+      data-gallery-modal-dialog
+      role="dialog"
+      aria-modal="true"
+      aria-label="{% include t.html key='projects.modal_label' %}"
+    >
+      <button
+        class="detail-gallery-modal__close"
+        type="button"
+        data-gallery-close
+        aria-label="{% include t.html key='projects.close_image' %}"
+      >
+        {% include t.html key="projects.close_image" %}
+      </button>
+      <figure class="detail-gallery-modal__figure">
+        <img class="detail-gallery-modal__image" data-gallery-modal-image src="" alt="" />
+        <figcaption class="detail-gallery-modal__caption" data-gallery-modal-caption hidden></figcaption>
+      </figure>
+    </div>
+  </div>
   {% endif %}
 
   <section class="detail-content reveal-on-scroll">{{ content }}</section>

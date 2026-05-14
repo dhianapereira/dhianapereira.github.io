@@ -206,6 +206,42 @@
   .detail-carousel__dots {
     order: -1;
   }
+
+  .detail-gallery__trigger img,
+  .detail-carousel__slide .detail-gallery__trigger img {
+    height: clamp(15rem, 72vw, 24rem);
+  }
+
+  .detail-gallery-modal {
+    padding: 1rem;
+  }
+
+  .detail-gallery-modal__dialog {
+    max-height: calc(100vh - 2rem);
+    padding: 4rem 0.85rem 0.85rem;
+  }
+
+  .detail-gallery-modal__image {
+    max-height: calc(100vh - 6rem);
+  }
+
+  .detail-gallery-modal__close {
+    top: 0.75rem;
+    right: 0.75rem;
+  }
+
+  .project-card:hover,
+  .project-card:focus-visible,
+  .note-card:hover,
+  .note-card:focus-visible,
+  .section-link:hover,
+  .section-link:focus-visible,
+  .back-link:hover,
+  .back-link:focus-visible,
+  .hero__icon-link:hover,
+  .hero__icon-link:focus-visible {
+    transform: none;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
