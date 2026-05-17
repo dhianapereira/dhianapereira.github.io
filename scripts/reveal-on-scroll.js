@@ -18,7 +18,10 @@
         }
       });
     }, {
-      threshold: 0.16
+      // A threshold of 0.16 works for small blocks, but very tall sections
+      // may never have 16% of their height visible at once.
+      threshold: 0,
+      rootMargin: "0px 0px -8% 0px"
     });
 
     elements.forEach(function (element) {
