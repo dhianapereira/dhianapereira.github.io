@@ -118,7 +118,8 @@
   flex-shrink: 0;
 }
 
-.project-card__body {
+.project-card__body,
+.note-card__body {
   display: grid;
   gap: 0.5rem;
 }
