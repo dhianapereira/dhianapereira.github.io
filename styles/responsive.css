@@ -4,6 +4,7 @@
   .listing-page__hero,
   .section-heading,
   .project-card,
+  .app-card,
   .note-card,
   .detail-hero__details {
     grid-template-columns: 1fr;
@@ -18,6 +19,7 @@
   .listing-page__hero,
   .section-heading,
   .project-list,
+  .app-list,
   .note-list,
   .section-link,
   .detail-page > .back-link,
@@ -25,6 +27,8 @@
   .detail-overview,
   .detail-gallery,
   .detail-content,
+  .app-info,
+  .app-documents,
   .error-panel {
     margin-left: 1.6rem;
     margin-right: 1.6rem;
@@ -46,6 +50,7 @@
 
   .site-header__stamp,
   .project-card__side,
+  .app-card__side,
   .note-card__side {
     align-items: flex-start;
     justify-items: start;
@@ -194,6 +199,26 @@
     padding-top: 1.2rem;
   }
 
+  .app-detail__heading {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .app-facts th,
+  .app-facts td {
+    display: block;
+    width: 100%;
+  }
+
+  .app-facts th {
+    padding-bottom: 0.2rem;
+    border-bottom: 0;
+  }
+
+  .app-facts td {
+    padding-top: 0;
+  }
+
   .detail-overview {
     grid-template-columns: 1fr;
   }
@@ -232,6 +257,8 @@
 
   .project-card:hover,
   .project-card:focus-visible,
+  .app-card:hover,
+  .app-card:focus-visible,
   .note-card:hover,
   .note-card:focus-visible,
   .section-link:hover,

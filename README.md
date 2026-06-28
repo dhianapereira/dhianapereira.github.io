@@ -5,6 +5,8 @@ My engineering journal :)
 ## Estrutura
 
 - `_projects/`: projetos do portfólio
+- `_apps/`: páginas objetivas de apps, com documentos legais por app em `legal/`
+- `assets/apps/`: logos e imagens dos apps, como `assets/apps/barba-e-tudo/logo.png`
 - `_notes/`: notas de engenharia
 - `pages/`: páginas de índice, como projetos e notas
 - `_data/site.yml`: perfil, contatos e stack

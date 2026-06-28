@@ -1,0 +1,106 @@
+---
+layout: default
+---
+
+{% assign app_locale = page.locale | default: site.default_locale %}
+{% assign i18n = site.data.i18n[app_locale] %}
+
+<article class="detail-page app-detail site-shell">
+  <a
+    class="back-link reveal-on-scroll reveal-on-scroll--visible"
+    href="{{ '/apps/' | relative_url }}"
+  >
+    {{ i18n.apps.back_label }}
+  </a>
+
+  <header class="detail-hero app-detail__hero reveal-on-scroll reveal-on-scroll--visible">
+    <div class="app-detail__heading">
+      {% include app_logo.html
+        logo=page.logo
+        label=page.title
+        class_name="app-detail__logo"
+      %}
+      <div>
+        <h1>{{ page.title }}</h1>
+        {% if page.description %}
+        <p class="detail-hero__summary">{{ page.description }}</p>
+        {% endif %}
+      </div>
+    </div>
+  </header>
+
+  <section class="app-info reveal-on-scroll">
+    <div>
+      <h2>{{ i18n.apps.info }}</h2>
+      <table class="app-facts">
+        <tbody>
+        {% if page.status %}
+        <tr>
+          <th scope="row">{{ i18n.apps.status }}</th>
+          <td>{{ page.status }}</td>
+        </tr>
+        {% endif %}
+        {% if page.date %}
+        <tr>
+          <th scope="row">{{ i18n.apps.year }}</th>
+          <td>{{ page.date | date: "%Y" }}</td>
+        </tr>
+        {% endif %}
+        {% if page.platforms %}
+        <tr>
+          <th scope="row">{{ i18n.apps.platforms }}</th>
+          <td>{{ page.platforms | join: " · " }}</td>
+        </tr>
+        {% endif %}
+        {% if page.categories %}
+        <tr>
+          <th scope="row">{{ i18n.apps.categories }}</th>
+          <td>{{ page.categories | join: " · " }}</td>
+        </tr>
+        {% endif %}
+        {% if page.store_links %}
+        <tr>
+          <th scope="row">{{ i18n.apps.store_links }}</th>
+          <td>
+            <ul class="app-facts__links">
+        {% for link in page.store_links %}
+              <li>
+                <a href="{{ link.url }}" target="_blank" rel="noreferrer noopener">
+                  {{ link.label }}
+                </a>
+              </li>
+        {% endfor %}
+            </ul>
+          </td>
+        </tr>
+        {% endif %}
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="app-documents reveal-on-scroll">
+    <h2>{{ i18n.apps.legal_links }}</h2>
+    {% if page.legal_links %}
+    <ul class="detail-link-list">
+      {% for link in page.legal_links %}
+      <li>
+        <a
+          href="{% if link.url contains '://' %}{{ link.url }}{% else %}{{ link.url | relative_url }}{% endif %}"
+          {% if link.url contains '://' %}target="_blank" rel="noreferrer noopener"{% endif %}
+        >
+          <span>{{ link.label }}</span>
+          <span>{{ link.url | replace: 'https://', '' | replace: 'http://', '' }}</span>
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
+    {% else %}
+    <p class="detail-panel__note">{{ i18n.apps.legal_empty }}</p>
+    {% endif %}
+  </section>
+
+  {% if content != "" %}
+  <section class="detail-content reveal-on-scroll">{{ content }}</section>
+  {% endif %}
+</article>

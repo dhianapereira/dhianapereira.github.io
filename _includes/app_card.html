@@ -1,0 +1,24 @@
+<a class="app-card reveal-on-scroll" href="{{ app.url | relative_url }}">
+  <div class="app-card__mark">
+    {% include app_logo.html
+      logo=app.logo
+      label=app.title
+      class_name="app-card__logo"
+    %}
+  </div>
+  <div class="app-card__body">
+    <p class="micro-label">{{ app.status | default: "App" }}</p>
+    <h3>{{ app.title }}</h3>
+    <p>{{ app.description }}</p>
+  </div>
+  <div class="app-card__side">
+    {% if app.platforms %}
+    <span>{{ app.platforms | join: " · " }}</span>
+    {% endif %}
+    {% if app.store_links %}
+    <span>{% include t.html key="apps.available_label" locale=app.locale %}</span>
+    {% else %}
+    <span>{% include t.html key="apps.unlisted_label" locale=app.locale %}</span>
+    {% endif %}
+  </div>
+</a>

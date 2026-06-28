@@ -49,6 +49,26 @@ projects:
   empty_title: "Projetos em breve"
   empty_text: "Novos estudos e produtos entram aqui conforme eu publico os detalhes."
 
+apps:
+  page_title: "Apps"
+  page_description: "Aplicativos publicados, em uso ou em desenvolvimento."
+  listing_label: "Aplicações"
+  counter_label: "APPS"
+  available_label: "Disponível em loja"
+  unlisted_label: "Fora de loja"
+  back_label: "Voltar"
+  info: "Informações"
+  status: "Status"
+  year: "Ano"
+  platforms: "Plataformas"
+  categories: "Categorias"
+  store_links: "Loja"
+  legal_links: "Documentos"
+  legal_empty: "Política de privacidade e termos de uso aparecem aqui quando forem publicados para este app."
+  updated_at: "Atualizado em"
+  empty_title: "Apps em preparação"
+  empty_text: "Os aplicativos entram aqui conforme forem publicados ou documentados."
+
 notes:
   page_title: "Notas de engenharia"
   page_description: "Lista completa de notas de engenharia."

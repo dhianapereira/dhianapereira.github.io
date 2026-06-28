@@ -1,0 +1,42 @@
+---
+layout: default
+title_key: apps.page_title
+description_key: apps.page_description
+locale: pt_BR
+lang: pt-BR
+permalink: /apps/
+---
+
+{% assign listing_locale = page.locale | default: site.default_locale %}
+{% assign i18n = site.data.i18n[listing_locale] %}
+{% assign all_apps = site.apps | where: "locale", listing_locale | where: "kind", "app" | sort: "date" | reverse %}
+<div class="listing-page listing-page--apps site-shell">
+  <header
+    class="listing-page__header reveal-on-scroll reveal-on-scroll--visible"
+  >
+    <div class="listing-page__rails" aria-hidden="true">
+      <p class="listing-page__rail listing-page__rail--right">
+        {{ i18n.apps.counter_label }} / {{ all_apps.size | plus: 0 | prepend: '0' | slice: -2, 2 }}
+      </p>
+    </div>
+    <div class="listing-page__hero listing-page__hero--compact">
+      <div class="listing-page__intro">
+        <p class="micro-label">{{ i18n.apps.listing_label }}</p>
+        <h1>{{ i18n.apps.page_title }}</h1>
+      </div>
+    </div>
+  </header>
+
+  {% if all_apps.size > 0 %}
+  <div class="app-list">
+    {% for app in all_apps %}
+    {% include app_card.html app=app %}
+    {% endfor %}
+  </div>
+  {% else %}
+  <section class="error-panel reveal-on-scroll">
+    <h2>{{ i18n.apps.empty_title }}</h2>
+    <p>{{ i18n.apps.empty_text }}</p>
+  </section>
+  {% endif %}
+</div>

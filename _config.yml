@@ -14,6 +14,9 @@ collections:
   projects:
     output: true
     permalink: /projects/:name/
+  apps:
+    output: true
+    permalink: /apps/:name/
   notes:
     output: true
     permalink: /notes/:name/
@@ -30,6 +33,11 @@ defaults:
       type: projects
     values:
       layout: project
+  - scope:
+      path: ""
+      type: apps
+    values:
+      layout: app
   - scope:
       path: ""
       type: notes

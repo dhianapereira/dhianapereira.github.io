@@ -1,0 +1,28 @@
+---
+layout: default
+---
+
+{% assign legal_locale = page.locale | default: site.default_locale %}
+{% assign i18n = site.data.i18n[legal_locale] %}
+
+<article class="detail-page site-shell">
+  <a
+    class="back-link reveal-on-scroll reveal-on-scroll--visible"
+    href="{{ page.app_url | default: '/apps/' | relative_url }}"
+  >
+    {{ i18n.apps.back_label }}
+  </a>
+
+  <header class="detail-hero reveal-on-scroll reveal-on-scroll--visible">
+    <h1>{{ page.title }}</h1>
+    {% if page.updated_at %}
+    <p class="detail-hero__summary">
+      {{ i18n.apps.updated_at }} {{ page.updated_at | date: "%d/%m/%Y" }}
+    </p>
+    {% elsif page.description %}
+    <p class="detail-hero__summary">{{ page.description }}</p>
+    {% endif %}
+  </header>
+
+  <section class="detail-content reveal-on-scroll">{{ content }}</section>
+</article>

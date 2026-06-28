@@ -1,8 +1,8 @@
 {% assign header_locale = page.locale | default: site.default_locale %} {%
 assign i18n = site.data.i18n[header_locale] %} {% assign current_section =
 'home' %} {% if page.url contains '/projects/' %} {% assign current_section =
-'projects' %} {% elsif page.url contains '/notes/' %} {% assign current_section
-= 'notes' %} {% endif %}
+'projects' %} {% elsif page.url contains '/notes/' %} {% assign current_section =
+'notes' %} {% endif %}
 <header class="site-header">
   <div class="site-shell site-header__inner">
     <a class="site-header__mark" href="{{ '/' | relative_url }}">
