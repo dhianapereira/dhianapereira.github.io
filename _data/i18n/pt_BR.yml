@@ -27,6 +27,10 @@ navigation:
   projects: "Projetos"
   notes: "Notas de Engenharia"
 
+theme:
+  enable_dark: "Ativar tema escuro"
+  enable_light: "Ativar tema claro"
+
 projects:
   page_title: "Projetos"
   page_description: "Lista completa de projetos."
