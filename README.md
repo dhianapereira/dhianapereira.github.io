@@ -1,6 +1,6 @@
 # Portfólio
 
-My engineering journal :)
+projects and notes.
 
 ## Estrutura
 
