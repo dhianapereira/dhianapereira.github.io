@@ -1,6 +1,6 @@
 ---
 title: "Monorepo para micro frontends em Flutter: como organizo e lido"
-description: "Anotações sobre como tenho organizado um monorepo Flutter pensado para micro frontends, com shell app, micro apps, pacotes compartilhados, Melos e CI."
+description: "Anotações sobre como tenho organizado monorepo Flutter pensado para micro frontends, com shell app, micro apps, pacotes compartilhados, Melos e CI."
 date: 2026-06-04
 locale: pt_BR
 lang: pt-BR
