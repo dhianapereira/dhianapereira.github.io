@@ -1,21 +1,17 @@
-.hero,
 .listing-page,
 .detail-page,
 .error-page {
   padding-top: 2.4rem;
 }
 
-.hero,
 .listing-page__header {
   position: relative;
 }
 
-.hero__rails,
 .listing-page__rails {
   pointer-events: none;
 }
 
-.hero__rail,
 .listing-page__rail,
 .detail-hero__meta {
   font-size: 0.76rem;
@@ -23,7 +19,6 @@
   text-transform: uppercase;
 }
 
-.hero__rail,
 .listing-page__rail {
   position: absolute;
   color: var(--color-muted);
@@ -31,32 +26,16 @@
   writing-mode: vertical-rl;
 }
 
-.hero__rail--left,
 .listing-page__rail--left {
   left: 0;
   top: 9rem;
 }
 
-.hero__rail--right,
 .listing-page__rail--right {
   right: 0;
   top: 12rem;
 }
 
-.hero__grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  align-items: start;
-  min-height: 24rem;
-  padding: 1rem 5.2rem 0;
-}
-
-.hero__main {
-  max-width: 34rem;
-  padding-top: 2.2rem;
-}
-
-.hero__title,
 .listing-page__intro h1,
 .detail-hero h1,
 .detail-content h2,
@@ -65,28 +44,6 @@
   font-family: var(--font-serif);
   font-weight: 500;
   letter-spacing: -0.06em;
-}
-
-.hero__title {
-  max-width: 8ch;
-  margin: 0;
-  font-size: clamp(3.2rem, 7.2vw, 5.4rem);
-  line-height: 0.9;
-}
-
-.hero__role {
-  margin: 0.95rem 0 0.8rem;
-  color: var(--color-muted);
-  font-size: 0.8rem;
-  font-weight: 700;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-}
-
-.hero__lead {
-  max-width: 25rem;
-  margin: 0;
-  font-size: 1.06rem;
 }
 
 .listing-page__header {

@@ -7,22 +7,6 @@ i18n = site.data.i18n[home_locale] %} {% assign home_projects = site.projects |
 where: "locale", home_locale | sort: "date" | reverse %} {% assign home_notes =
 site.notes | where: "locale", home_locale | sort: "date" | reverse %}
 <div class="site-shell">
-  <section class="hero">
-    <div class="hero__rails" aria-hidden="true">
-      <p class="hero__rail hero__rail--left">
-        PRODUTO · ARQUITETURA · TESTES · DOCUMENTAÇÃO
-      </p>
-    </div>
-    <div class="hero__grid reveal-on-scroll reveal-on-scroll--visible">
-      <div class="hero__main">
-        <p class="micro-label">{{ i18n.home.hero_label }}</p>
-        <h1 class="hero__title">{{ i18n.home.hero_title }}</h1>
-        <p class="hero__role">{{ i18n.home.profile_role }}</p>
-        <p class="hero__lead">{{ i18n.home.hero_text }}</p>
-      </div>
-    </div>
-  </section>
-
   <section class="section-block section-block--projects" id="projetos">
     <div class="section-heading reveal-on-scroll">
       <h2>{{ i18n.home.projects_title }}</h2>

@@ -1,6 +1,5 @@
 @media (max-width: 1100px) {
   .site-header__inner,
-  .hero__grid,
   .listing-page__hero,
   .section-heading,
   .project-card,
@@ -15,7 +14,6 @@
     align-items: center;
   }
 
-  .hero__grid,
   .listing-page__hero,
   .section-heading,
   .project-list,
@@ -36,7 +34,6 @@
     padding-right: 0;
   }
 
-  .hero__grid,
   .listing-page__hero,
   .section-heading,
   .site-footer__inner {
@@ -57,7 +54,6 @@
     text-align: left;
   }
 
-  .hero__main,
   .listing-page__intro {
     padding-top: 1rem;
   }
@@ -69,7 +65,6 @@
     padding-right: 0;
   }
 
-  .hero__rail,
   .listing-page__rail {
     display: none;
   }
@@ -151,15 +146,10 @@
     display: none;
   }
 
-  .hero,
   .listing-page,
   .detail-page,
   .error-page {
     padding-top: 1.25rem;
-  }
-
-  .hero__title {
-    font-size: clamp(2.7rem, 15vw, 4.2rem);
   }
 
   .listing-page__intro h1,
@@ -172,11 +162,6 @@
   .note-card h3,
   .error-panel h2 {
     font-size: clamp(1.45rem, 8vw, 2rem);
-  }
-
-  .hero__grid {
-    gap: 2.8rem;
-    min-height: auto;
   }
 
   .site-footer__inner {

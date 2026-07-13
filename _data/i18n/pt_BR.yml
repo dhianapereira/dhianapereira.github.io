@@ -8,10 +8,6 @@ meta:
   brand_alt: "Dhiana Pereira"
 
 home:
-  hero_label: "Portfólio"
-  hero_title: "Dhiana Pereira"
-  hero_text: "Atuando em aplicações em produção com foco em qualidade, testes e arquitetura."
-  profile_role: "Engenheira mobile"
   projects_title: "Projetos"
   notes_title: "Notas de engenharia"
   archive_projects: "Ver todos os projetos"
