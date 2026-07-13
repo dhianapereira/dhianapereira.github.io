@@ -155,13 +155,14 @@
   .listing-page__intro h1,
   .detail-hero h1,
   .error-panel h1 {
-    font-size: clamp(2.4rem, 13vw, 3.9rem);
+    font-size: clamp(2.1rem, 10vw, 3.2rem);
   }
 
   .project-card h3,
+  .app-card h3,
   .note-card h3,
   .error-panel h2 {
-    font-size: clamp(1.45rem, 8vw, 2rem);
+    font-size: clamp(1.35rem, 6.5vw, 1.75rem);
   }
 
   .site-footer__inner {
