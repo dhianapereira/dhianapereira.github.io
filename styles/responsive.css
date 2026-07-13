@@ -62,10 +62,6 @@
     padding-top: 1rem;
   }
 
-  .hero__aside {
-    padding-top: 0;
-  }
-
   .site-footer__inner {
     margin-left: 1.6rem;
     margin-right: 1.6rem;
@@ -181,11 +177,6 @@
   .hero__grid {
     gap: 2.8rem;
     min-height: auto;
-  }
-
-  .hero__aside {
-    padding-top: 0;
-    gap: 1rem;
   }
 
   .hero__icon-link {

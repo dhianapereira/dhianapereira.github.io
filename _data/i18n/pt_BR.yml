@@ -15,8 +15,6 @@ home:
   contacts_label: "Contatos e redes"
   projects_title: "Projetos"
   notes_title: "Notas de engenharia"
-  stack_label: "Stack"
-  skills_label: "Skills"
   archive_projects: "Ver todos os projetos"
   archive_notes: "Ver todas as notas"
 

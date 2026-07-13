@@ -9,7 +9,7 @@ My engineering journal :)
 - `assets/apps/`: logos e imagens dos apps, como `assets/apps/barba-e-tudo/logo.png`
 - `_notes/`: notas de engenharia
 - `pages/`: páginas de índice, como projetos e notas
-- `_data/site.yml`: perfil, contatos e stack
+- `_data/site.yml`: perfil e contatos
 - `_data/i18n/`: textos da interface por idioma
 - `_layouts/` e `_includes/`: arquitetura modular do site
 - `assets/`: imagens, logo e outros arquivos estáticos

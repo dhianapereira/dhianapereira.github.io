@@ -45,8 +45,7 @@
 
 .hero__grid {
   display: grid;
-  grid-template-columns: minmax(0, 0.98fr) minmax(260px, 0.58fr);
-  gap: 3.2rem;
+  grid-template-columns: 1fr;
   align-items: start;
   min-height: 24rem;
   padding: 1rem 5.2rem 0;
@@ -92,13 +91,6 @@
 
 .hero__main .hero__links {
   margin-top: 1.5rem;
-}
-
-.hero__aside {
-  display: grid;
-  gap: 1rem;
-  align-content: start;
-  padding-top: 2.3rem;
 }
 
 .listing-page__header {

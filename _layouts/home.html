@@ -76,15 +76,6 @@ site.notes | where: "locale", home_locale | sort: "date" | reverse %}
           </a>
         </div>
       </div>
-
-      <aside class="hero__aside">
-        <p class="micro-label">{{ i18n.home.stack_label }}</p>
-        <ul class="hero__skills" aria-label="{{ i18n.home.skills_label }}">
-          {% for skill in site.data.site.skills %}
-          <li class="tag tag--note">{{ skill }}</li>
-          {% endfor %}
-        </ul>
-      </aside>
     </div>
   </section>
 

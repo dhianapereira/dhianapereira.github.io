@@ -257,19 +257,12 @@
   height: 1.15rem;
 }
 
-.hero__skills,
 .tag-list,
 .detail-link-list,
 .app-facts {
   padding: 0;
   margin: 0;
   list-style: none;
-}
-
-.hero__skills {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.7rem;
 }
 
 .button-link {
