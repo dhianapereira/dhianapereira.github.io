@@ -222,39 +222,9 @@
 .section-link:hover,
 .section-link:focus-visible,
 .back-link:hover,
-.back-link:focus-visible,
-.hero__icon-link:hover,
-.hero__icon-link:focus-visible {
+.back-link:focus-visible {
   color: var(--color-ink);
   transform: translateX(2px);
-}
-
-.hero__links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.8rem;
-}
-
-.hero__icon-link {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 3rem;
-  height: 3rem;
-  border: 1px solid rgba(109, 116, 143, 0.2);
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.32);
-  box-shadow: 0 10px 22px rgba(31, 24, 18, 0.03);
-  color: var(--color-muted);
-  transition:
-    color var(--transition),
-    transform var(--transition),
-    border-color var(--transition);
-}
-
-.hero__icon-link svg {
-  width: 1.15rem;
-  height: 1.15rem;
 }
 
 .tag-list,

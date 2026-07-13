@@ -12,11 +12,13 @@ home:
   hero_title: "Dhiana Pereira"
   hero_text: "Atuando em aplicações em produção com foco em qualidade, testes e arquitetura."
   profile_role: "Engenheira mobile"
-  contacts_label: "Contatos e redes"
   projects_title: "Projetos"
   notes_title: "Notas de engenharia"
   archive_projects: "Ver todos os projetos"
   archive_notes: "Ver todas as notas"
+
+footer:
+  contacts_label: "Contatos e redes"
 
 navigation:
   menu_open: "Abrir menu principal"

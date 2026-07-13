@@ -179,7 +179,13 @@
     min-height: auto;
   }
 
-  .hero__icon-link {
+  .site-footer__inner {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 1.1rem;
+  }
+
+  .site-footer__contact-link {
     width: 2.8rem;
     height: 2.8rem;
   }
@@ -256,8 +262,8 @@
   .section-link:focus-visible,
   .back-link:hover,
   .back-link:focus-visible,
-  .hero__icon-link:hover,
-  .hero__icon-link:focus-visible {
+  .site-footer__contact-link:hover,
+  .site-footer__contact-link:focus-visible {
     transform: none;
   }
 }
