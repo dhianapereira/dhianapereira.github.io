@@ -7,6 +7,16 @@ i18n = site.data.i18n[home_locale] %} {% assign home_projects = site.projects |
 where: "locale", home_locale | sort: "date" | reverse %} {% assign home_notes =
 site.notes | where: "locale", home_locale | sort: "date" | reverse %}
 <div class="site-shell">
+  <section
+    class="home-intro reveal-on-scroll reveal-on-scroll--visible"
+    aria-labelledby="home-intro-title"
+  >
+    <h1 id="home-intro-title">
+      <strong>{{ i18n.home.intro_owner }}</strong>
+      {{ i18n.home.intro_text }}
+    </h1>
+  </section>
+
   <section class="section-block section-block--projects" id="projetos">
     <div class="section-heading reveal-on-scroll">
       <h2>{{ i18n.home.projects_title }}</h2>

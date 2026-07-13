@@ -8,6 +8,8 @@ meta:
   brand_alt: "Dhiana Pereira"
 
 home:
+  intro_owner: "Eu sou a Dhiana."
+  intro_text: "Este é meu caderno de engenharia na internet: um lugar onde registro projetos, experiências e o que aprendo trabalhando com software."
   projects_title: "Projetos"
   notes_title: "Notas de engenharia"
   archive_projects: "Ver todos os projetos"

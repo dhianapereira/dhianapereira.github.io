@@ -1,3 +1,22 @@
+.home-intro {
+  margin: 2.4rem 5.2rem 0;
+  padding: 1.2rem 0 0.2rem;
+}
+
+.home-intro h1 {
+  max-width: 49rem;
+  margin: 0;
+  font-family: var(--font-sans);
+  font-size: clamp(1.05rem, 1.65vw, 1.25rem);
+  font-weight: 400;
+  letter-spacing: -0.015em;
+  line-height: 1.65;
+}
+
+.home-intro strong {
+  font-weight: 600;
+}
+
 .listing-page,
 .detail-page,
 .error-page {
